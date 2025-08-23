@@ -1,6 +1,7 @@
 // General images
 import ggjLogo from "../images/GGJ00_Logo_Dark.svg";
 import brisbanePowerhouseLogo from "../images/BrisbanePowerhouseLogo.svg";
+import imageUnavailable from "../images/n-a-sign-icon-illustration-vector.jpg";
 
 // Blossom project images
 import blossomFeatureImage from "../images/Blossom/blossomfeature.png_itok=j0LdQOrF&timestamp=1580623155.png";
@@ -46,6 +47,7 @@ export {
     // General images
     ggjLogo,
     brisbanePowerhouseLogo,
+    imageUnavailable,
 
     // Blossom project images
     blossomFeatureImage,

@@ -1,9 +1,9 @@
-import tmpImage from "../images/seokin-chung-07-30.jpg";
 import * as projectImageImports from "./projectImageImports";
 
 export interface ProjectDetails {
   name: string;
   // To be replaced by summary/roles/responsibilities
+  descriptionSummaryExtra?: string;
   descriptionSummary: string;
   descriptionRole: string;
   descriptionResponsibilities: string[];
@@ -14,6 +14,7 @@ export interface ProjectDetails {
   engine?: string;
   genre?: string;
   link?: string;
+  linkText?: string;
   linkNote?: string;
   images: ProjectImage[];
   accoladeImage?: ProjectImage;
@@ -30,7 +31,8 @@ export interface ProjectImage {
 export const projectArray: ProjectDetails[] = [
   {
     name: "Blossom",
-    descriptionSummary: '<i>The last world tree in existence is dying. You are a friendly gardener that is on a mission to heal it with your flowers. Maintain the status quo of the soil so your seeds can grow and bloom. As you complete levels more seeds and flowers become available to you.<\/i><br\/> Blossom is a casual strategy puzzle game made during the Global Game Jam over 48 hours in a small team of 4. The theme of the game jam was \'Repair\'. Players are tasked with helping heal the withering world tree by accumulating points earned by growing different flowers. Players must manage the soil\'s water retention as well as each flower\'s preferred light level as some will only grow either at day or at night.',
+    descriptionSummaryExtra: 'The last world tree in existence is dying. You are a friendly gardener that is on a mission to heal it with your flowers. Maintain the status quo of the soil so your seeds can grow and bloom. As you complete levels more seeds and flowers become available to you.',
+    descriptionSummary: 'Blossom is a casual strategy puzzle game made during the Global Game Jam over 48 hours in a small team of 4. The theme of the game jam was \'Repair\'. Players are tasked with helping heal the withering world tree by accumulating points earned by growing different flowers. Players must manage the soil\'s water retention as well as each flower\'s preferred light level as some will only grow either at day or at night.',
     descriptionRole: 'During the project I acted as an all rounder, helping out wherever needed. I assisted in mechanic design, mechanic implementation, asset sourcing and asset implementation.',
     descriptionResponsibilities: [
       'Tutorial implementation',
@@ -43,6 +45,7 @@ export const projectArray: ProjectDetails[] = [
     engine: 'Unity',
     genre: 'Casual Puzzle Stategy',
     link: 'https://globalgamejam.org/2020/games/blossom-0',
+    linkText: 'Download here',
     linkNote: 'Username on the GGJ website is \'Epidemic\'.',
     images: [
       {
@@ -96,6 +99,7 @@ export const projectArray: ProjectDetails[] = [
     engine: 'Unity',
     genre: 'Puzzle',
     link: 'https://drive.google.com/file/d/1byoBKOIQpcOA3eRaVlLOG-xFfDp518Bp/view',
+    linkText: 'Download here',
     images: [
       {
         imageAlt: "A briefcase with a three number input on top.",
@@ -245,7 +249,8 @@ export const projectArray: ProjectDetails[] = [
   },
   {
     name: "Wizard Cat",
-    descriptionSummary: '<i>Disaster! Wizard Cat has been thrown from their home world into a strange new land. Luckily, they\'ve stumbled across a tower that must have also belonged to a mystical being. Search the tower for items and complete puzzles to activate the portal and find your way home! Search the tower for clues on which items in what combination will lead you back home!<\/i><br\/> Wizard Cat is a short puzzle game made during the Global Game Jam over 48 hour game jam in a small team of 5. The game jam theme was \'Lost and Found\'. Players explore a small tower environment, collecting clues and solving short puzzles in order to identify the three items needed to escape.',
+    descriptionSummaryExtra: 'Disaster! Wizard Cat has been thrown from their home world into a strange new land. Luckily, they\'ve stumbled across a tower that must have also belonged to a mystical being. Search the tower for items and complete puzzles to activate the portal and find your way home! Search the tower for clues on which items in what combination will lead you back home!',
+    descriptionSummary: 'Wizard Cat is a short puzzle game made during the Global Game Jam over 48 hour game jam in a small team of 5. The game jam theme was \'Lost and Found\'. Players explore a small tower environment, collecting clues and solving short puzzles in order to identify the three items needed to escape.',
     descriptionRole: 'As the sole programmer for the project, I was responsible for player movement, object interaction and puzzle implementation.',
     descriptionResponsibilities: [
       'Dynamic 5 object inventory',
@@ -258,6 +263,7 @@ export const projectArray: ProjectDetails[] = [
     engine: 'Unity',
     genre: 'Casual Puzzle',
     link: 'https://v3.globalgamejam.org/2021/games/wizard-cat-0',
+    linkText: 'Download here',
     linkNote: 'Username on the GGJ website is \'Epidemic\'.',
     images: [
       {
