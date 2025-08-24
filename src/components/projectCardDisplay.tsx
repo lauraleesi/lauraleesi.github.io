@@ -193,8 +193,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             width: "80%",
             height: "80%",
             overflowY: "scroll",
-            // bgcolor: averageColour,
-            backgroundImage: `linear-gradient(180deg, ${averageColour}, white)`,
+            bgcolor: "white",
+            // backgroundImage: `linear-gradient(180deg, ${averageColour}, white)`,
             borderRadius: 3,
             boxShadow: 24,
             p: 4,
@@ -246,10 +246,24 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                 ) : (
                   ""
                 )}
+                {project.timeToComplete ? (
+                  <>
+                    <b>Timeline: </b> {project.timeToComplete} <br />
+                  </>
+                ) : (
+                  ""
+                )}
+                {project.teamSize ? (
+                  <>
+                    <b>Team Size: </b> {project.teamSize} <br />
+                  </>
+                ) : (
+                  ""
+                )}
                 {project.link ? (
                   <>
                     <b>Link: </b>{" "}
-                    <a href={project.link}>
+                    <a href={project.link} target="_blank">
                       {project.linkText ? project.linkText : "Download link"}
                     </a>
                     {project.linkNote ? (
@@ -257,6 +271,15 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                     ) : (
                       ""
                     )}
+                    <br />
+                  </>
+                ) : (
+                  ""
+                )}
+                {project.accoladeImage ? (
+                  <>
+                    <br/>
+                    <img src={project.accoladeImage.imageSrc} alt={project.accoladeImage.imageAlt} style={{maxHeight: "8vh"}}/>
                     <br />
                   </>
                 ) : (
@@ -380,5 +403,5 @@ function findAverageColour(featureImage: ProjectImage) {
   }).then(color => { return color.hex; }).catch(() => { return "white"; });
   return averageColour;
 }
-// accoladeImage?: ProjectImage;
+
 // videoLink?: string;````````

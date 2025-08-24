@@ -1,7 +1,6 @@
 import React, { ReactNode } from 'react';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { themeDefault, themeRed } from './themes';
-
+import { themeDefault, themeAlt } from './themes';
 
 
 interface MuiThemeProviderProps {
@@ -9,29 +8,9 @@ interface MuiThemeProviderProps {
 }
 
 const MuiThemeProvider: React.FC<MuiThemeProviderProps> = ({ children }) => (
-  <ThemeProvider theme={themeDefault}>
+  <ThemeProvider theme={themeAlt}>
     {children}
   </ThemeProvider>
 );
 
 export default MuiThemeProvider;
-
-// import * as React from 'react';
-// import { createTheme, ThemeProvider } from '@mui/material/styles';
-// import { lime, purple } from '@mui/material/colors';
-// import Button from '@mui/material/Button';
-
-// const themeDefault = createTheme({
-//   palette: {
-//     primary: lime,
-//     secondary: purple,
-//   },
-// });
-
-// export const ThemeWrapper:React.FC<{children: any}> = () => {
-//   return (
-//     <ThemeProvider theme={themeDefault}>
-//     {children}
-//     </ThemeProvider>
-//   );
-// }

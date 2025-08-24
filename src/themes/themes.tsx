@@ -14,20 +14,51 @@ export const themeDefault = createTheme({
       light: '#834bff',
     },
   },
+  typography: {
+    fontFamily: [
+      '-apple-system',
+      'BlinkMacSystemFont',
+      '"Segoe UI"',
+      'Roboto',
+      '"Helvetica Neue"',
+      'Arial',
+      'sans-serif',
+      '"Apple Color Emoji"',
+      '"Segoe UI Emoji"',
+      '"Segoe UI Symbol"',
+    ].join(','),
+  },
 });
 
-export const themeRed = createTheme({
+export const themeAlt = createTheme({
   // Customize your theme here
   palette: {
     primary: {
-      dark: '#aa2e25',
-      main: '#f44336',
-      light: '#f6685e',
+      // dark: '#b96848',
+      // main: '#c96e4a',
+      // light: '#e27c53',
+      dark: '#bc413f',
+      main: '#c95656',
+      light: '#c37274',
     },
     secondary: {
-      dark: '#4615b2',
-      main: '#651fff',
-      light: '#834bff',
+      dark: '#bc413f',
+      main: '#c95656',
+      light: '#c37274',
     },
+  },
+  typography: {
+    fontFamily: [
+      '-apple-system',
+      'BlinkMacSystemFont',
+      '"Segoe UI"',
+      'Roboto',
+      '"Helvetica Neue"',
+      'Arial',
+      'sans-serif',
+      '"Apple Color Emoji"',
+      '"Segoe UI Emoji"',
+      '"Segoe UI Symbol"',
+    ].join(','),
   },
 });

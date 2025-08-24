@@ -1,6 +1,17 @@
 import { Box, Button, Typography } from "@mui/material";
 import * as React from "react";
 import { ProjectCardDisplay } from "../components/projectCardDisplay";
+// import Pdf from "../data/Laura_Leesi_Resume_GamesDeveloper.pdf";
+
+// TODO enable PDF download
+const onPdfDownloadClick = () => {
+  const link = document.createElement("a");
+  link.href = `${process.env.REACT_APP_URL}/assets/Laura_Leesi_Resume_GamesDeveloper.pdf`;
+  link.download = "Laura_Leesi_Resume.pdf";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
 
 export const Resume: React.FC = () => {
   return (
@@ -22,6 +33,10 @@ export const Resume: React.FC = () => {
             experimenting with immerging technologies to create meaningful
             experiences.
           </Typography>
+          <br />
+          <Button variant="outlined" onClick={onPdfDownloadClick}>
+            PDF Download
+          </Button>
         </Box>
         <Box
           id="skillsAndInterestsBox"
@@ -164,6 +179,10 @@ export const Resume: React.FC = () => {
                   <li>
                     Worked across the whole development process, including
                     discovery, planning, estimations, and development
+                  </li>
+                  <li>
+                    Built backend and frontend functionality, and created
+                    communication between the client and server code.
                   </li>
                   <li>Iteratively worked on .Net based systems</li>
                 </ul>

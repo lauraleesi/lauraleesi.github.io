@@ -1,8 +1,12 @@
 import { Box, Button, Typography } from "@mui/material";
 import * as React from "react";
 import { ProjectCardDisplay } from "../components/projectCardDisplay";
+import { useNavigate } from "react-router-dom";
+
 
 export const Home: React.FC = () => {
+const navigate = useNavigate();
+
   return (
     <Box
       sx={{
@@ -28,9 +32,10 @@ export const Home: React.FC = () => {
           <br />
         </Typography>
       </Box>
+      <br/>
       <Box>
-        <Button variant="outlined">Resume</Button>
-        <Button variant="outlined">Projects</Button>
+        <Button variant="outlined" sx={{ margin: "0 3vh"}} onClick={() => navigate('/resume')}>Resume</Button>
+        <Button variant="outlined" sx={{ margin: "0 3vh"}} onClick={() => navigate('/projects')}>Projects</Button>
       </Box>
       <FeaturedProjects />
     </Box>

@@ -19,6 +19,8 @@ export interface ProjectDetails {
   images: ProjectImage[];
   accoladeImage?: ProjectImage;
   videoLink?: string;
+  timeToComplete?: string;
+  teamSize?: string; 
 }
 
 export interface ProjectImage {
@@ -83,6 +85,8 @@ export const projectArray: ProjectDetails[] = [
       imageAlt: 'Made during the Global Game Jam.',
       imageSrc: projectImageImports.ggjLogo,
     },
+    timeToComplete: "48 Hours",
+    teamSize: "4",
   },
   {
     name: "Briefcase Mystery Demo",
@@ -132,6 +136,8 @@ export const projectArray: ProjectDetails[] = [
         displayOnModal: true,
       },
     ],
+    timeToComplete: "3 weeks full time",
+    teamSize: "3",
   },
   {
     name: "Bumble Bots",
@@ -173,6 +179,8 @@ export const projectArray: ProjectDetails[] = [
         displayOnModal: true,
       },
     ],
+    timeToComplete: "1 week full time",
+    teamSize: "Variable",
   },
   {
     name: "Charge Rider",
@@ -199,6 +207,8 @@ export const projectArray: ProjectDetails[] = [
       imageAlt: 'Made in collaboration with The Brisbane Powerhouse.',
       imageSrc: projectImageImports.brisbanePowerhouseLogo,
     },
+    timeToComplete: "4 weeks full time",
+    teamSize: "4",
   },
   {
     name: "Stranded",
@@ -246,6 +256,8 @@ export const projectArray: ProjectDetails[] = [
         displayOnModal: true,
       },
     ],
+    timeToComplete: "3 weeks full time",
+    teamSize: "4",
   },
   {
     name: "Wizard Cat",
@@ -307,5 +319,7 @@ export const projectArray: ProjectDetails[] = [
       imageAlt: 'Made during the Global Game Jam.',
       imageSrc: projectImageImports.ggjLogo,
     },
+    timeToComplete: "48 Hours",
+    teamSize: "5",
   },
 ];
